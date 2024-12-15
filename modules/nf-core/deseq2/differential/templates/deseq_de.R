@@ -369,7 +369,9 @@ dds <- DESeq(
     minReplicatesForReplace = opt\$min_replicates_for_replace,
     useT = opt\$use_t,
     sfType = opt\$sf_type,
-    parallel=TRUE, BPPARAM=MulticoreParam(opt\$cores)
+    parallel=TRUE,
+    BPPARAM=MulticoreParam(opt\$cores),
+    betaPrior = FALSE
 )
 
 comp.results <-
